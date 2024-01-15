@@ -13,7 +13,7 @@ function ResetPassword() {
     axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:3000/user/reset-password/${userId}/${token}`, {password})
+        axios.post(`https://password-reset-floww.onrender.com/user/reset-password/${userId}/${token}`, {password})
         .then(res => {
             if(res.data.Status === "Success") {
                 navigate('/login')

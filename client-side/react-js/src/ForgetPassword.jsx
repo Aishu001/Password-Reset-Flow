@@ -16,7 +16,7 @@ function ForgetPassword() {
     const handleSubmit = (e) => {
      
         e.preventDefault()
-        axios.post('http://localhost:3000/missed/forgotpassword', { email }, { withCredentials: true })
+        axios.post('https://password-reset-floww.onrender.com/missed/forgotpassword', { email }, { withCredentials: true })
         .then(res => {
             if (res.data.Status === "Success") {
                 navigate('/login');
